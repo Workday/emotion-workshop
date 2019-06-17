@@ -43,6 +43,8 @@ function App() {
     }
   })
 
+  const activeTodos = todos.filter(todo => !todo.completed)
+
   const onInsert = text => {
     setTodos([...todos, { key: nextKey, completed: false, text }])
     setNextKey(nextKey + 1)
@@ -55,6 +57,15 @@ function App() {
           : candidateTodo
       )
     )
+
+  const onToggleAll = event => {
+    setTodos(
+      todos.map(todo => ({
+        ...todo,
+        completed: event.target.checked,
+      }))
+    )
+  }
 
   const onClearCompleted = () => {
     setTodos(todos.filter(todo => !todo.completed))
@@ -70,7 +81,13 @@ function App() {
           </header>
 
           <section className="main">
-            <input id="toggle-all" className="toggle-all" type="checkbox" />
+            <input
+              id="toggle-all"
+              className="toggle-all"
+              type="checkbox"
+              checked={activeTodos.length === 0}
+              onChange={onToggleAll}
+            />
             <label htmlFor="toggle-all" />
 
             <ul className="todo-list">
