@@ -67,6 +67,15 @@ function App() {
     )
   }
 
+  const onEdit = editedTodo =>
+    setTodos(
+      todos.map(candidateTodo =>
+        candidateTodo.key === editedTodo.key
+          ? { ...candidateTodo, text: editedTodo.text }
+          : candidateTodo
+      )
+    )
+
   const onClearCompleted = () => {
     setTodos(todos.filter(todo => !todo.completed))
   }
@@ -97,6 +106,7 @@ function App() {
                   todo={todo}
                   onDelete={() => onDelete(todo)}
                   onToggle={() => onToggle(todo)}
+                  onEdit={onEdit}
                 />
               ))}
             </ul>
