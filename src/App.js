@@ -56,6 +56,10 @@ function App() {
       )
     )
 
+  const onClearCompleted = () => {
+    setTodos(todos.filter(todo => !todo.completed))
+  }
+
   return (
     <div className="App">
       <section className="todoapp">
@@ -117,7 +121,9 @@ function App() {
                 </a>
               </li>
             </ul>
-            <button className="clear-completed">Clear completed</button>
+            <button className="clear-completed" onClick={onClearCompleted}>
+              Clear completed
+            </button>
           </footer>
         </div>
       </section>
