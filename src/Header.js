@@ -8,13 +8,13 @@ const HeaderContainer = styled.h1`
 	font-size: 100px;
 	font-weight: 100;
 	text-align: center;
-	color:blue;
+	color:${props => props.color ? props.color : 'grey'};
 	-webkit-text-rendering: optimizeLegibility;
 	-moz-text-rendering: optimizeLegibility;
 	text-rendering: optimizeLegibility;
 `
-function Header() {
-    return ( <HeaderContainer>Todos</HeaderContainer>)
+function Header({color}) {
+    return ( <HeaderContainer color={color}>Todos</HeaderContainer>)
   }
 
 export default Header
