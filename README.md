@@ -1,71 +1,89 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Dealing with my Emotion, a CSS in JS Workshop
 
-## Available Scripts
+> In this workshop, you’ll learn the ins and outs of writing CSS in JS! We’ll take a React-based app with classic stylesheets, and step-by-step, migrate to CSS in JS using Emotion. We’ll cover both the benefits and the trade-offs of managing styles in JavaScript. Not only will you learn all the ways to leverage Emotion, you will become a Style Master!
 
-In the project directory, you can run:
+This workshop was prepared for [DinosaurJS 2019](https://dinosaurjs.org/), but feel free to follow along on your own! You're also welcome to fork this repo and share it freely with others ♥.
 
-### `npm start`
+## What you can expect
 
-Runs the app in the development mode.<br>
+1. A safe and welcoming space
+
+As part of DinosaurJS, this workshop adheres to the [JSConf Code of Conduct](https://jsconf.com/codeofconduct.html).
+
+> **The Quick Version**
+>
+> JSConf is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organisers.
+
+2. Fun
+
+3. Mastery of Emotion
+
+### You should already know...
+
+- JavaScript
+- a little bit about component-oriented design in the frontend
+- _basic_ CSS - nothing expert-level
+
+### You will learn...
+
+- Emotion!
+- why CSS in JS is ready for mainstream development
+- how to convert traditional stylesheets to CSS in JS
+- more CSS than you already know (probably)
+
+### Along the way, you will pickup...
+
+- greater comfort with component composition in general
+- React best practices
+- nothing but function components powered by Hooks
+- some awesome pro tips
+- a love of no semi-colons
+
+We _love_ questions, so please be brave and speak up! We'll do our best to create question asking opportunities. If you have trouble with wording your question, flag one of the instructors or teaching assistants and we'll help!
+
+## How this workshop is organized
+
+This workshop has several chapters, and each chapter follows a predictable pattern.
+
+1. Introduce a new concept
+2. Identify relevant documentation and starting points
+3. Build stuff - on your own, at first
+4. A guided walkthrough
+5. Talk about it
+
+Each chapter has a useful branch to checkout that has relevant comments and newly created files ready to go. Example: `01-styled-components`
+
+Each chapter also has a useful branch to checkout that has the finished solution. Example: `01-styled-components-solution`
+
+You can view all of these branches in the [Pull Request list](https://github.com/Workday/emotion-workshop/pulls?q=is%3Apr+is%3Aopen+sort%3Acreated-asc)
+
+## Getting started
+
+In the project directory, install dependencies first:
+
+`npm install`
+
+Then you can run the app:
+
+`npm start`
+
+This starts an amazing Todo app in dev mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
+### Editor Recommendations
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We're using [Visual Studio Code](https://code.visualstudio.com/) for this workshop. This is completely optional, so use whatever you prefer.
 
-### `npm run build`
+For syntax highlighting and IntelliSense we recommend the [vscode-styled-components extension](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components).
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) is configured, but completely optional.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Chapters
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Styled components
+2. Props
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-### Editor
-We're using Visual Studio Code for this workshop. For syntax highlighting and intellisense please use this extension: https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+...
