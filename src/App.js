@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import 'todomvc-app-css/index.css'
+import './App.css'
 
 import { ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS } from './constants'
 import NewTodo from './NewTodo'
