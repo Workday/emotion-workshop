@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import './App.css'
 
 import { ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS } from './constants'
+import Header from './Header'
 import NewTodo from './NewTodo'
 import TodoItem from './TodoItem'
 
@@ -85,7 +86,7 @@ function App() {
       <section className="todoapp">
         <div>
           <header className="header">
-            <h1>todos</h1>
+            <Header></Header>
             <NewTodo onInsert={onInsert} />
           </header>
 
