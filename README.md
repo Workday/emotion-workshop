@@ -27,14 +27,17 @@ As part of DinosaurJS, this workshop adheres to the [JSConf Code of Conduct](htt
 ### You will learn...
 
 - Emotion!
-- more CSS than you already know (probably)
 - why CSS in JS is ready for mainstream development
+- how to convert traditional stylesheets to CSS in JS
+- more CSS than you already know (probably)
 
 ### Along the way, you will pickup...
 
+- greater comfort with component composition in general
 - React best practices
-- great comfort with component composition in general
+- nothing but function components powered by Hooks
 - some awesome pro tips
+- a love of no semi-colons
 
 We _love_ questions, so please be brave and speak up! We'll do our best to create question asking opportunities. If you have trouble with wording your question, flag one of the instructors or teaching assistants and we'll help!
 
@@ -75,6 +78,8 @@ You will also see any lint errors in the console.
 We're using [Visual Studio Code](https://code.visualstudio.com/) for this workshop. This is completely optional, so use whatever you prefer.
 
 For syntax highlighting and IntelliSense we recommend the [vscode-styled-components extension](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components).
+
+[Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) is configured, but completely optional.
 
 ## Chapters
 
