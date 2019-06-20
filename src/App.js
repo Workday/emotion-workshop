@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import styled from '@emotion/styled'
 
 import './App.css'
 
@@ -8,6 +9,21 @@ import FilterButton, {ButtonTypes} from './FilterButton'
 import NewTodo from './NewTodo'
 import TodoItem from './TodoItem'
 
+const ListContainer = styled.li`
+  display: inline
+`
+
+// const FiltersUnorderedList = styled.ul`
+//   margin: 0;
+// 	padding: 0;
+// 	list-style: none;
+// 	position: absolute;
+// 	right: 0;
+//   left: 0;
+//   ${ListContainer} {
+//     background-color: 'orange'
+//   }
+// `
 const initialTodos = [
   {
     key: 1,
@@ -122,30 +138,30 @@ function App() {
               <span> left</span>
             </span>
             <ul className="filters">
-              <li>
+              <ListContainer>
                 <FilterButton 
                   text={'All'} 
                   buttonType={ButtonTypes.default} 
                   onClick={() => setFilter(ALL_TODOS)}
                   href="#/">
                 </FilterButton>
-              </li>
-              <li>
+              </ListContainer>
+              <ListContainer>
                 <FilterButton 
                   text={'Active'} 
                   buttonType={ButtonTypes.primary} 
                   onClick={() => setFilter(ACTIVE_TODOS)} 
                   href="#/active">
                 </FilterButton>
-              </li>
-              <li>
+              </ListContainer>
+              <ListContainer>
                 <FilterButton 
                   text={'Completed'} 
                   buttonType={ButtonTypes.secondary} 
                   onClick={() => setFilter(COMPLETED_TODOS)}
                   href="#/completed">
                 </FilterButton>
-              </li>
+              </ListContainer>
             </ul>
             <button className="clear-completed" onClick={onClearCompleted}>
               Clear completed
