@@ -42,7 +42,6 @@ const ButtonContainer = styled.a`
 	)}
 `
 function FilterButton({buttonType, onClick, href, text}) {
-	console.warn(buttonType)
     return ( <ButtonContainer href={href} onClick={onClick} buttonType={buttonType}>{text}</ButtonContainer>)
   }
 
