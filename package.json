@@ -32,6 +32,8 @@
     ]
   },
   "devDependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.9",
+    "babel-core": "^6.26.3",
     "eslint-plugin-emotion": "^10.0.7"
   }
 }

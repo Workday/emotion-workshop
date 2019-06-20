@@ -13,17 +13,17 @@ const ListContainer = styled.li`
   display: inline
 `
 
-// const FiltersUnorderedList = styled.ul`
-//   margin: 0;
-// 	padding: 0;
-// 	list-style: none;
-// 	position: absolute;
-// 	right: 0;
-//   left: 0;
-//   ${ListContainer} {
-//     background-color: 'orange'
-//   }
-// `
+const FiltersUnorderedList = styled.ul`
+  margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	right: 0;
+  left: 0;
+  ${ListContainer} {
+    background-color: orange
+  }
+`
 const initialTodos = [
   {
     key: 1,
@@ -137,7 +137,7 @@ function App() {
               <span>items</span>
               <span> left</span>
             </span>
-            <ul className="filters">
+            <FiltersUnorderedList>
               <ListContainer>
                 <FilterButton 
                   text={'All'} 
@@ -162,7 +162,7 @@ function App() {
                   href="#/completed">
                 </FilterButton>
               </ListContainer>
-            </ul>
+            </FiltersUnorderedList>
             <button className="clear-completed" onClick={onClearCompleted}>
               Clear completed
             </button>
