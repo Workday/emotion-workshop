@@ -301,22 +301,22 @@ body {
 	display: inline;
 }
 
-.filters li a {
+/* .filters li a {
 	color: inherit;
 	margin: 3px;
 	padding: 3px 7px;
 	text-decoration: none;
 	border: 1px solid transparent;
 	border-radius: 3px;
-}
+} */
 
-.filters li a:hover {
+/* .filters li a:hover {
 	border-color: rgba(175, 47, 47, 0.1);
-}
+} */
 
-.filters li a.selected {
+/* .filters li a.selected {
 	border-color: rgba(175, 47, 47, 0.2);
-}
+} */
 
 .clear-completed,
 html .clear-completed:active {

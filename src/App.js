@@ -4,6 +4,7 @@ import './App.css'
 
 import { ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS } from './constants'
 import Header from './Header'
+import FilterButton, {ButtonTypes} from './FilterButton'
 import NewTodo from './NewTodo'
 import TodoItem from './TodoItem'
 
@@ -122,31 +123,28 @@ function App() {
             </span>
             <ul className="filters">
               <li>
-                <a
-                  href="#/"
-                  className="selected"
+                <FilterButton 
+                  text={'All'} 
+                  buttonType={ButtonTypes.default} 
                   onClick={() => setFilter(ALL_TODOS)}
-                >
-                  All
-                </a>
+                  href="#/">
+                </FilterButton>
               </li>
               <li>
-                <a
-                  href="#/active"
-                  className=""
-                  onClick={() => setFilter(ACTIVE_TODOS)}
-                >
-                  Active
-                </a>
+                <FilterButton 
+                  text={'Active'} 
+                  buttonType={ButtonTypes.primary} 
+                  onClick={() => setFilter(ACTIVE_TODOS)} 
+                  href="#/active">
+                </FilterButton>
               </li>
               <li>
-                <a
-                  href="#/completed"
-                  className=""
+                <FilterButton 
+                  text={'Completed'} 
+                  buttonType={ButtonTypes.secondary} 
                   onClick={() => setFilter(COMPLETED_TODOS)}
-                >
-                  Completed
-                </a>
+                  href="#/completed">
+                </FilterButton>
               </li>
             </ul>
             <button className="clear-completed" onClick={onClearCompleted}>
