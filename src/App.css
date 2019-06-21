@@ -67,19 +67,6 @@ body {
 	color: #e6e6e6;
 }
 
-.todoapp h1 {
-	position: absolute;
-	top: -155px;
-	width: 100%;
-	font-size: 100px;
-	font-weight: 100;
-	text-align: center;
-	color:grey;
-	-webkit-text-rendering: optimizeLegibility;
-	-moz-text-rendering: optimizeLegibility;
-	text-rendering: optimizeLegibility;
-}
-
 .new-todo,
 .edit {
 	position: relative;
