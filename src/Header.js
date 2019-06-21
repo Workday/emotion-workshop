@@ -17,7 +17,7 @@ const HeaderContainer = styled.h1`
   font-size: 100px;
   font-weight: 100;
   text-align: center;
-  color: /* call props function here */ ;
+  color: ${props => (props.color ? props.color : 'grey')};
   text-rendering: optimizeLegibility;
 `
 function Header({ color }) {
