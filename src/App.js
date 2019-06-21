@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import styled from '@emotion/styled'
 
 import './App.css'
 
 import { ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS } from './constants'
+import FilterButton, { ButtonTypes } from './FilterButton'
 import Header from './Header'
 import NewTodo from './NewTodo'
 import TodoItem from './TodoItem'
@@ -24,6 +26,10 @@ const initialTodos = [
     text: 'profit',
   },
 ]
+
+const ListContainer = styled.li`
+  display: inline;
+`
 
 function App() {
   const [todos, setTodos] = useState(initialTodos)
@@ -121,33 +127,30 @@ function App() {
               <span> left</span>
             </span>
             <ul className="filters">
-              <li>
-                <a
-                  href="#/"
-                  className="selected"
+              <ListContainer>
+                <FilterButton
+                  text={'All'}
+                  buttonType={ButtonTypes.default}
                   onClick={() => setFilter(ALL_TODOS)}
-                >
-                  All
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#/active"
-                  className=""
+                  href="#/"
+                />
+              </ListContainer>
+              <ListContainer>
+                <FilterButton
+                  text={'Active'}
+                  buttonType={ButtonTypes.primary}
                   onClick={() => setFilter(ACTIVE_TODOS)}
-                >
-                  Active
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#/completed"
-                  className=""
+                  href="#/active"
+                />
+              </ListContainer>
+              <ListContainer>
+                <FilterButton
+                  text={'Completed'}
+                  buttonType={ButtonTypes.secondary}
                   onClick={() => setFilter(COMPLETED_TODOS)}
-                >
-                  Completed
-                </a>
-              </li>
+                  href="#/completed"
+                />
+              </ListContainer>
             </ul>
             <button className="clear-completed" onClick={onClearCompleted}>
               Clear completed
