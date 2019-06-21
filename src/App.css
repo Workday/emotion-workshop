@@ -67,19 +67,6 @@ body {
 	color: #e6e6e6;
 }
 
-/* .todoapp h1 {
-	position: absolute;
-	top: -155px;
-	width: 100%;
-	font-size: 100px;
-	font-weight: 100;
-	text-align: center;
-	color:grey;
-	-webkit-text-rendering: optimizeLegibility;
-	-moz-text-rendering: optimizeLegibility;
-	text-rendering: optimizeLegibility;
-} */
-
 .new-todo,
 .edit {
 	position: relative;
@@ -296,27 +283,6 @@ body {
 	right: 0;
 	left: 0;
 }
-
-/* .filters li {
-	display: inline;
-} */
-
-/* .filters li a {
-	color: inherit;
-	margin: 3px;
-	padding: 3px 7px;
-	text-decoration: none;
-	border: 1px solid transparent;
-	border-radius: 3px;
-} */
-
-/* .filters li a:hover {
-	border-color: rgba(175, 47, 47, 0.1);
-} */
-
-/* .filters li a.selected {
-	border-color: rgba(175, 47, 47, 0.2);
-} */
 
 .clear-completed,
 html .clear-completed:active {

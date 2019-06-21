@@ -13,17 +13,6 @@ const ListContainer = styled.li`
   display: inline
 `
 
-// const FiltersUnorderedList = styled.ul`
-//   margin: 0;
-// 	padding: 0;
-// 	list-style: none;
-// 	position: absolute;
-// 	right: 0;
-//   left: 0;
-//   ${ListContainer} {
-//     background-color: 'orange'
-//   }
-// `
 const initialTodos = [
   {
     key: 1,
