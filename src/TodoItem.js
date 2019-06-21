@@ -1,13 +1,17 @@
-/**
- * Steps:
- * 1. Create a base font style for the list item. Reference App.css to find the font styles applied to the todo li
- * 2. Create a style component for the list item and applying the remaining css to it from App.css
- * 3. Compose and add the base font styles to the styled component for the list item
- * For reference: https://emotion.sh/docs/composition
- */
-
 import React, { useRef, useState } from 'react'
+import { css } from '@emotion/core'
+import styled from '@emotion/styled'
 
+const baseFontStyles = css`
+  font-size: 24px;
+  font-weight: 400;
+`
+
+const TodoListItem = styled.li`
+  ${baseFontStyles}
+  position: relative;
+  border-bottom: 1px solid #ededed;
+`
 function TodoItem({
   todo,
   todo: { completed, text },
@@ -37,7 +41,7 @@ function TodoItem({
   }
 
   return (
-    <li className={classNames.join(' ')}>
+    <TodoListItem className={classNames.join(' ')}>
       <div className="view">
         <input
           className="toggle"
@@ -56,7 +60,7 @@ function TodoItem({
         onChange={onChange}
         onBlur={onBlur}
       />
-    </li>
+    </TodoListItem>
   )
 }
 
