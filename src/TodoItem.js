@@ -1,3 +1,11 @@
+/**
+ * Steps:
+ * 1. Create a base font style for the list item. Reference App.css to find the font styles applied to the todo li
+ * 2. Create a style component for the list item and applying the remaining css to it from App.css
+ * 3. Compose and add the base font styles to the styled component for the list item
+ * For reference: https://emotion.sh/docs/composition
+ */
+
 import React, { useRef, useState } from 'react'
 
 function TodoItem({
