@@ -32,6 +32,8 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-emotion": "^10.0.7"
+    "eslint-plugin-emotion": "^10.0.7",
+    "jest-emotion": "^10.0.11",
+    "react-test-renderer": "^16.8.6"
   }
 }
