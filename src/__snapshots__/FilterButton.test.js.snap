@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with correct styles 1`] = `
+.emotion-0 {
+  margin: 3px;
+  padding: 6px 10px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  margin: 0 10px;
+  font-weight: 600;
+  background-color: #e0e0e0;
+  color: black;
+}
+
+<a
+  className="emotion-0"
+  onClick={[MockFunction]}
+/>
+`;
