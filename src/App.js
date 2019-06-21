@@ -7,6 +7,7 @@ import Header from './Header'
 import FilterButton, {ButtonTypes} from './FilterButton'
 import NewTodo from './NewTodo'
 import TodoItem from './TodoItem'
+
 const initialTodos = [
   {
     key: 1,
