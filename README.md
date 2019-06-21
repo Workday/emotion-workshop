@@ -29,6 +29,7 @@ As part of DinosaurJS, this workshop adheres to the [JSConf Code of Conduct](htt
 - Emotion!
 - why CSS in JS is ready for mainstream development
 - how to convert traditional stylesheets to CSS in JS
+- general concepts for CSS in JS that apply to _any_ alternative, like [Styled Components](https://www.styled-components.com/).
 - more CSS than you already know (probably)
 
 ### Along the way, you will pickup...
@@ -81,9 +82,23 @@ For syntax highlighting and IntelliSense we recommend the [vscode-styled-compone
 
 [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) is configured, but completely optional.
 
+## One more note before we begin
+
+We don't assume everyone here knows CSS in and out (selectors, properties, etc), or even the latest JavaScript or React syntax (like hooks). We won't walk through every detail as we introduce concepts, but please do your best to focus on the _concepts_ we introduce. When we start each chapter's exercise (your time to code), please raise your hand right away and we'd love to iron out these details!!
+
+Stuff like hooks is almost entirely in the background and we won't be touching these aspects directly!
+
+On that note, here are a few links that may come up!
+
+- [React Function Components](https://reactjs.org/docs/components-and-props.html#function-and-class-components)
+- [React State Hooks](https://reactjs.org/docs/hooks-state.html)
+
+We also encourage pairing up, or at least offering/asking your neighbor for help and collaborating as much as possible.
+
 ## Chapters
 
 1. Styled components
 2. Props
+3. Advanced props
 
 ...
