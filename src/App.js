@@ -62,7 +62,7 @@ function App() {
     setTodos(
       todos.map(todo => ({
         ...todo,
-        completed: event.target.checked,
+        completed: activeTodos.length > 0,
       }))
     )
   }
@@ -80,6 +80,12 @@ function App() {
     setTodos(todos.filter(todo => !todo.completed))
   }
 
+  const getTodoStatus = () => {
+    const filterText = filter !== ALL_TODOS ? filter : 'total'
+    const todoCount = visibleTodos.length
+    return `You have ${todoCount} ${filterText} todo${todoCount === 1 ? '' : 's'}`
+  }
+
   return (
     <div className="App">
       <section className="todoapp">
@@ -90,18 +96,18 @@ function App() {
           </header>
 
           <section className="main">
-            <input
-              id="toggle-all"
+            <button
               className="toggle-all"
-              type="checkbox"
-              checked={activeTodos.length === 0}
-              onChange={onToggleAll}
-            />
-            <label htmlFor="toggle-all" />
+              aria-pressed={activeTodos.length === 0}
+              onClick={onToggleAll}
+            >
+              <span className="accessible-hide">Mark all todos completed</span>
+            </button>
 
             <ul className="todo-list">
-              {visibleTodos.map(todo => (
+              {visibleTodos.map((todo, index) => (
                 <TodoItem
+                  id={`todo-${index}`}
                   key={todo.key}
                   todo={todo}
                   onDelete={() => onDelete(todo)}
@@ -121,31 +127,31 @@ function App() {
             </span>
             <ul className="filters">
               <li>
-                <a
+                <button
                   href="#/"
                   className="selected"
                   onClick={() => setFilter(ALL_TODOS)}
                 >
                   All
-                </a>
+                </button>
               </li>
               <li>
-                <a
+                <button
                   href="#/active"
                   className=""
                   onClick={() => setFilter(ACTIVE_TODOS)}
                 >
                   Active
-                </a>
+                </button>
               </li>
               <li>
-                <a
+                <button
                   href="#/completed"
                   className=""
                   onClick={() => setFilter(COMPLETED_TODOS)}
                 >
                   Completed
-                </a>
+                </button>
               </li>
             </ul>
             <button className="clear-completed" onClick={onClearCompleted}>
@@ -154,7 +160,9 @@ function App() {
           </footer>
         </div>
       </section>
-
+      <section className="accessible-hide" role="status" aria-live="polite">
+        {getTodoStatus()}
+      </section>
       <footer className="info">
         <p>Double-click to edit a todo</p>
       </footer>
