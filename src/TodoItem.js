@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 
 function TodoItem({
+  id,
   todo,
   todo: { completed, text },
   onToggle,
@@ -31,14 +32,17 @@ function TodoItem({
   return (
     <li className={classNames.join(' ')}>
       <div className="view">
-        <input
+        <button
           className="toggle"
-          type="checkbox"
-          checked={completed}
-          onChange={onToggle}
+          role="switch"
+          aria-labelledby={id}
+          aria-checked={completed}
+          onClick={onToggle}
         />
-        <label onDoubleClick={() => setEditing(true)}>{text}</label>
-        <button className="destroy" onClick={onDelete} />
+        <span id={id} onDoubleClick={() => setEditing(true)}>{text}</span>
+        <button className="destroy" onClick={onDelete}>
+          <span className="accessible-hide">Remove todo</span>
+        </button>
       </div>
 
       <input
