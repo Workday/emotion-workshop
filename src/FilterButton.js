@@ -1,8 +1,3 @@
-/**
- * Steps:
- * 1. Within the props function, change the background color and text color of the buttons
- */
-
 import React from 'react'
 import styled from '@emotion/styled'
 
@@ -21,7 +16,27 @@ const ButtonContainer = styled.a`
 	margin: 0 10px;
 	font-weight: 600;
 	${(props => {
-		/* based on the button type, change the backgroundColor and text color  */
+		let backgroundColorButton
+		let textColor
+		switch (props.buttonType) {
+			case ButtonTypes.primary:
+				backgroundColorButton = '#2196f3';
+				textColor = 'white'
+				break;
+			case ButtonTypes.secondary:
+				backgroundColorButton = '#4caf50';
+				textColor = 'white'
+				break;
+			case ButtonTypes.default:
+			default:
+				backgroundColorButton = '#e0e0e0';
+				textColor = 'black'
+				break;
+		}
+		return {
+			backgroundColor: backgroundColorButton,
+			color: textColor
+		}
 	}
 	)}
 `
