@@ -12,8 +12,10 @@ import FilterButton from './FilterButton'
 
 expect.addSnapshotSerializer(serializer)
 
-test('renders with correct styles', () => {
-  const tree = renderer.create(<FilterButton onClick={jest.fn()} />).toJSON()
+test('renders a FilterButton', () => {
+  const component = renderer
+    .create(<FilterButton onClick={jest.fn()} />)
+    .toJSON()
 
-  expect(tree).toMatchSnapshot()
+  expect(component).toMatchSnapshot()
 })
