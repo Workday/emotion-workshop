@@ -9,8 +9,6 @@ const HeaderContainer = styled.h1`
   font-weight: 100;
   text-align: center;
   color: blue;
-  -webkit-text-rendering: optimizeLegibility;
-  -moz-text-rendering: optimizeLegibility;
   text-rendering: optimizeLegibility;
 `
 function Header() {
