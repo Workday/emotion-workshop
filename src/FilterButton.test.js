@@ -1,8 +1,8 @@
 /**
- * 1. Test the styled component props
- * 2. Change a style in FilterButton and make sure the snapshots fail
- * 3. Update snapshots
- * 4. Mock out the onClick
+ * 1. Install react-test-renderer and jest-emotion
+ * 2. Test the styled component props
+ * 3. Change a style in FilterButton and make sure the snapshots fail
+ * 4. Update snapshots for reference: https://jestjs.io/docs/en/snapshot-testing
  */
 
 import React from 'react'
